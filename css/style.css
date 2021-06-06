@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato;
+    font-style: normal;
+}
+
+a { text-decoration: none;}
+
+.header {
+    background-color: #222222;
+    padding: 17px 0 18px 0;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features {
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 41px;
+}
+
+.header__right {
+    align-items: center;
+    display: flex;
+}
+
+.bucket {
+    position: relative;
+}
+
+.count {
+    position: absolute;
+    display: flex;
+    right: -10px;
+    top: -19px;
+    align-items: center;
+    justify-content: center;
+
+    width: 19px;
+    height: 19px;
+    background: #F16D7F;
+    border-radius: 50%;
+
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #FFFFFF;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 33px;
+}
+
+.intro {
+    height: 754px;
+    background-color: #f1e4e6;
+    margin-bottom: 65px;
+}
+
+.intro__wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+
+    background-image: url('../images/man-main.png');
+    background-repeat: no-repeat;
+    background-position: -228px 0;
+}
+
+.intro__text {
+    max-width: 405px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    padding-left: 16px;
+    border-left: 12px solid #F16D7F;
+}
+
+
+.intro__text_header{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.intro__text_red {
+    color: #F16D7F;
+}
+
+.for-blocks__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.for-blocks__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 260px;
+    text-align: center;
+
+}
+
+.card-women {
+    background: linear-gradient(to right, rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url('../images/for-women.png');
+}
+
+.card-women:hover {
+    background: url('../images/for-women.png');
+}
+
+.card-men {
+    background: linear-gradient(to right, rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url('../images/for-men.png')
+}
+
+.card-men:hover {
+    background: url('../images/for-men.png')
+}
+
+.card-kids {
+    background: linear-gradient(to right, rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url('../images/for-kids.png')
+}
+
+.card-kids:hover {
+    background: url('../images/for-kids.png')
+}
+
+.card-accesories {
+    background: linear-gradient(to right, rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url('../images/accesories.png')
+}
+
+.card-accesories:hover {
+    background: url('../images/accesories.png')
+}
+
+.for-blocks__card:last-child {
+    width: 100%;
+    margin-top: 30px;
+    height: 180px;
+    margin-bottom: 96px;
+}
+
+.for-blocks__card_header {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F16D7F;
+}
+
+.for_blocks__card_info {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.items-info {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.items-info__header {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    color: #222222; 
+}
+
+.items-info__text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9F9F9F;
+}
+
+.items-blocks__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.items-blocks {
+    margin-bottom: 18px;
+}
+
+.item-blocks__block {
+    width: 360px;
+    height: 581px;
+    background-color: #F8F8F8;
+    margin-bottom: 30px;
+}
+
+.item-blocks__block_description {
+    padding: 25px 28px 20px 16px;
+}
+
+.item-blocks__block_desc_name {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.item-blocks__block_desc_info {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5D5D5D;
+    margin-bottom: 18px;
+}
+
+.item-blocks__block_desc_cost {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F16D7F;
+}
+
+.item-blocks__block_img {
+    width: 360px;
+    height: 420px;
+}
+
+.img-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7E4E2;
+}
+
+
+
+.btn-vap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 95px;
+}
+
+.btn-vap a {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    border: 1px solid #FF6A6A;
+    padding: 15px 39px 14px 39px;
+}
+
+.btn-vap a:hover {
+    background-color: #F26376;
+    color: #FFFFFF;
+}
+
+.features {
+    height: 341px;
+    background: #222224;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features__inner_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features__one {
+    width: 360px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features__one:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+
+.features__one_header {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19.96px;
+    line-height: 24px;
+    color: #FBFBFB;
+    margin-top: 28px;
+    margin-bottom: 16px;
+}
+
+.features__one_text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13.972px;
+    line-height: 17px;
+    text-align: center;
+    color: #FBFBFB;
+}
+
+
+.footer {
+    height: 448px;
+    background: linear-gradient(to right, rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url('../images/bf-footer.jpg');
+    
+    background-size: 100%;
+}

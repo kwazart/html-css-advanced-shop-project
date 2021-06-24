@@ -148,3 +148,98 @@ footer {
         }
     }
 }
+
+/* TABLE */
+@media (max-width:768px) {
+    footer {
+        .footer_main {
+            height: 614px;
+
+            .footer_wrap {
+                flex-direction: column;
+            }
+
+            &__block {
+                width: 100%;
+                margin: 0 auto 48px;
+
+                &__quote {
+                    width: 360px;
+                    margin: 0 auto;
+                }
+            }
+
+            &__subscribe {
+                margin: 0 auto;
+
+                &__text {
+                    font-size: $mainFontSize;
+                    line-height: 153.2%;
+                    text-align: center;
+                    color: $secondaryColor;
+                    margin-bottom: 22px;
+    
+                    & span {
+                        font-weight: bold;
+                        font-size: 24px;
+                    }
+                }
+
+                &__input_btn {
+                    form {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .footer_contact {
+            max-width: 768px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+}
+
+/* phone */
+@media (max-width:375px) {
+    footer {
+        .footer_main {
+            height: 550px;
+            padding-left: 17px;
+            padding-right: 17px;
+
+            .footer_wrap {
+                flex-direction: column;
+            }
+
+            &__block {
+                margin: 0 auto;
+            }
+
+            &__subscribe {
+                width: 100%;
+
+            }
+        }
+
+        .footer_contact {
+            max-width: 375px;
+            height: 143px;
+
+            .footer_wrap {
+                flex-direction: column-reverse;
+            }
+            
+            &__socials {
+                margin: 43px auto 40px;
+            }
+
+            &__copyright {
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 9px;
+            }
+        }
+    }
+}

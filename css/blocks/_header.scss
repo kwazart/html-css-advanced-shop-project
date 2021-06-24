@@ -16,6 +16,36 @@ header {
 
     .header__item:not(:last-child) {
         margin-right: 33px;
+    }  
+}
+
+ /* tablet */
+@media (max-width:1140px) and (min-width: 768px) {
+    header {
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+
+        &__wrap {
+            max-width: calc(768px - 16px * 2);
+        }
+    }
+}
+
+ /* phone */
+ @media (max-width:767px) and (min-width: 375px) {
+    header {
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+
+        .header__item:not(:first-of-type) {
+            display: none;
+        }
+
+        .header__item:first-of-type {
+            margin-right: 0;
+        }
     }
 }
 

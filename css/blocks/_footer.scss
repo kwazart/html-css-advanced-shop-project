@@ -1,0 +1,150 @@
+@import "../blocks/vars";
+@import "../blocks/property";
+
+footer {
+    .footer_main {
+        @include just-content-center;
+        
+
+        height: 448px;
+        background: linear-gradient(to right, rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url('../../images/bf-footer.jpg');
+        background-size: cover;
+
+        .footer_wrap {
+            @include just-content-space-between;
+            @include container;
+        }
+    
+        &__block {
+            width: 360px;
+            height: 225px;
+            display: flex;
+            flex-direction: column;
+            margin-right: 223px;
+    
+            &__quote {
+                @include just-content-center;
+    
+                & p {
+                    font-size: $mainFontSize + 6;
+                    line-height: $mainLineHeight + 7;
+                    text-align: center;
+                    color: #222224;
+    
+                    & span {
+                        font-style: italic;
+                    }
+                }
+    
+                &__text {
+                    font-size: $mainFontSize + 3;
+                    line-height: 167.2%;
+                    text-align: center;
+                    color: #222224;
+                    margin-bottom: 32px;
+                }
+            }
+    
+            &__photo  {
+                @include just-content-center;
+    
+                & img {
+                    border-radius: 50%;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &__subscribe {
+            width: 557px;
+            text-align: center;
+
+            &__text {
+                font-size: $mainFontSize + 4;
+                line-height: 167.2%;
+                text-align: center;
+                color: $secondaryColor;
+                margin-bottom: 32px;
+
+                & span {
+                    font-weight: bold;
+                    font-size: 24px;
+                }
+            }
+
+            &__input_btn {
+                @include just-content-center;
+
+                &__form {
+                    @include just-content-center;
+                    color: #222224;
+                    opacity: 0.67;
+                }
+
+                &__inputarea {
+                    background-color: #E1E1E1;
+                    border: none;
+                    height: 49px;
+                    width: 256px;
+                    padding: 10px 30px;
+                    vertical-align: bottom;
+                    box-sizing: border-box;
+                    border-radius: 24px 0 0 24px;
+                    outline:none;
+                }
+
+                &__button {
+                    border: none;
+                    height: 49px;
+                    width: 100px;
+                    background: #F16D7F;
+                    border-radius: 0 24px 24px 0;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .footer_contact {
+        @include vertical-aligement;
+
+        height: 79px;
+        background: #222224;
+
+        .footer_wrap {
+            @include container;
+            @include just-content-space-between;
+        }
+
+        &__copyright {
+            @include vertical-aligement;
+
+            width: 332px;
+            line-height: 19px;
+            color: #FBFBFB;
+        }
+
+        &__socials {
+            @include just-content-space-between;
+            
+
+            width: 147px;
+
+            & a div {
+                @include just-content-center;
+
+                background: #FFFFFF;
+                width: 32px;
+                height: 32px;
+            }
+
+            & a div:hover {
+                background: $mainColor;
+
+                & svg {
+                    fill: #FFFFFF;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "main";
+
+header {
+    .header__wrap {
+        @include container;
+        @include just-content-space-between;
+    }
+
+    .header__logo {
+        margin-right: 41px;
+    }
+
+    .header__right {
+        @include just-content-center;
+    }
+
+    .header__item:not(:last-child) {
+        margin-right: 33px;
+    }
+}
+

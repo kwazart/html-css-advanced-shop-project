@@ -11,7 +11,6 @@
     @include container;
     @include just-content-space-between;
 
-    height: 675px;
     margin-top: 39px;
 
     &__form {
@@ -52,6 +51,7 @@
                 
                 .radio-item {
                     @include vertical-aligement;
+                    
 
                     label {
                         font-weight: 300;
@@ -63,8 +63,14 @@
                         
                     }
 
-                    &:last-of-type {
+                    &:not(:first-of-type) {
                         margin-left: 20px;
+                    }
+
+                    &:last-of-type {
+                        input, label {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -83,6 +89,7 @@
 
                 width: 167px;
                 height: 50px;
+                margin-bottom: 96px;
                 background: $mainColor;
                 border: none;
 
@@ -94,30 +101,22 @@
                 
                 svg {
                     margin-left: 20px;
-                }
-
-                img {
-                    width: 200px;
-                    height: 200px;
-                    position: absolute;
-                    // bottom: -161px;
-                    right: -1000px;
-                    z-index: -1;
-                    bottom: -360px;
+                    fill:white;
                 }
 
                 &:hover {
-                    svg #filter0_d {
-                        display: none;
-                    }
-
-                    img {
-                        animation-name: bearup;
-                        animation-duration: 5s;
-                        animation-timing-function: cubic-bezier(0,1,0,1);  
-                    }
+                    box-shadow: -3px 0px 66px -5px rgba(191, 31, 88, 0.2);
                 }
 
+                &:active {
+                    background: $primaryColor;
+                    color: $mainColor;
+                    outline: 1px solid $mainColor;
+
+                    svg {
+                        fill: $mainColor;
+                    }
+                }
             }
         }
     }
@@ -143,4 +142,100 @@
         }
 
     }
+}
+
+@media (max-width:768px) and (min-width:376px) {
+    .navigation {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__header {
+            padding: 0;
+        }
+    }
+
+
+    .signin {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        &__form {
+            min-width: 360px;
+
+            .radios {
+                .radio-item {
+                    &:last-of-type {
+                        input#sex3, label[for=sex3] {
+                            display: block;
+                        }
+                    }
+                }
+            }     
+        }
+
+        &__info {
+            width: 100%;
+            margin-left: 22px;
+
+            p, ul li {
+                font-size: $mainFontSize + 2;
+                line-height: $mainLineHeight + 2  ;
+            }
+
+            &__header {
+                margin-bottom: 32px;
+            }
+
+            &__text {
+                margin-bottom: 22px;
+            }
+
+            &__list li {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width:375px) {
+    .navigation__header {
+        margin-bottom: 0;
+    }
+
+    .signin {
+        flex-direction: column;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        &__form {
+            button[type=submit] {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__info {
+            margin-left: 0;
+            margin-bottom: 96px;
+            width: 100%;
+
+            p, ul li {
+                font-size: $mainFontSize + 2;
+                line-height: $mainLineHeight + 2  ;
+            }
+
+            &__header {
+                margin-bottom: 32px;
+            }
+
+            &__text {
+                margin-bottom: 22px;
+            }
+
+            &__list li {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    
 }

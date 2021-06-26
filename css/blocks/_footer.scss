@@ -97,10 +97,24 @@ footer {
                     border: none;
                     height: 49px;
                     width: 100px;
-                    background: #F16D7F;
+                    background: #e9314a;
                     border-radius: 0 24px 24px 0;
                     color: #FFFFFF;
+
+                    &:hover {
+                        border-color: $mainColor;
+                        background-color: $mainColor;
+                        color: $primaryColor;
+                        transition: 0.5s;
+                    }
+    
+                    &:active {
+                        background: $primaryColor;
+                        color: $mainColor;
+                        font-weight: bold;
+                    }
                 }
+        
             }
         }
     }
@@ -136,15 +150,22 @@ footer {
                 background: #FFFFFF;
                 width: 32px;
                 height: 32px;
-            }
 
-            & a div:hover {
-                background: $mainColor;
-
-                & svg {
-                    fill: #FFFFFF;
+                &:hover {
+                    background: $mainColor;
+    
+                    & svg {
+                        fill: #FFFFFF;
+                    }
                 }
-            }
+
+                &:active {
+                    background: $primaryColor;
+                    & svg {
+                        fill:$mainColor;
+                    }
+                }
+            }     
         }
     }
 }

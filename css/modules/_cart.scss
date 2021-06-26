@@ -6,6 +6,12 @@
     min-height: 128px + 214px + 442px;
     margin-bottom: 128px;
 
+    .cart__header {
+        font-weight: 300;
+        font-size: $mainFontSize + 2;
+        line-height: $mainLineHeight + 2;
+        color: $secondaryColor;
+    }
 
     &__items {
         
@@ -86,6 +92,17 @@
                     background-color: $mainColor;
                     color: $primaryColor;
                     transition: 0.5s;
+                    box-shadow: -3px 0px 66px -5px rgba(191, 31, 88, 0.2);
+                }
+
+                &:active {
+                    background: $primaryColor;
+                    color: $mainColor;
+                    outline: 1px solid $mainColor;
+
+                    svg {
+                        fill: $mainColor;
+                    }
                 }
             }
 
@@ -97,15 +114,11 @@
         width: 360px;
 
         &__address {
-
+            width: 360px;
             margin-bottom: 57px;
+            max-height: 272px;
 
-            p {
-                font-weight: 300;
-                font-size: $mainFontSize + 2;
-                line-height: $mainLineHeight + 2;
-                color: $secondaryColor;
-            }
+            
 
             &__form {
                 display: flex;
@@ -155,6 +168,7 @@
             height: 214px;
             background-color: #F5F3F3;
 
+            width: 360px;
             padding: 39px 34px 42px 44px;
             display: flex;
             flex-direction: column;
@@ -173,7 +187,7 @@
 
             &__grand {
                 text-align: end;
-                font-weight: 300;
+                font-weight: bold;
                 font-size: $mainFontSize + 2;
                 line-height: $mainLineHeight + 2;
                 color: $mainColor;
@@ -182,6 +196,7 @@
                 span {
                     margin-right: 25px;
                     color: #4A4A4A;
+                    font-weight: 300;
                 }
             }
 
@@ -210,7 +225,180 @@
                     line-height: $mainLineHeight + 2;
 
                     color: $primaryColor;
+
+                    &:hover {
+                        box-shadow: -3px 0px 66px -5px rgba(191, 31, 88, 0.2);
+                    }
+    
+                    &:active {
+                        background: $primaryColor;
+                        color: $mainColor;
+                        outline: 1px solid $mainColor;
+    
+                        svg {
+                            fill: $mainColor;
+                        }
+                    }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) and (min-width:376px) {
+    .navigation__header {
+        padding-left: 16px;
+        padding-right: 18px;
+    }
+
+    .cart {
+        flex-direction: column;
+        padding-left: 16px;
+        padding-right: 18px;
+
+        &__items {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .cart__header {
+            margin-top: 64px;
+        }
+
+        &__info {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            &__address {
+                margin-bottom: 0;
+                width: 360px;
+            }
+
+            &__total {
+                width: 360px;
+            }
+
+        }
+    }
+}
+
+/* phone */
+@media (max-width:375px) {
+    .navigation {
+        .container {
+            justify-content: center ;
+        }
+    }
+
+    .cart {
+        flex-direction: column;
+        padding-left: 9px;
+        padding-right: 8px;
+        margin-bottom: 96px;
+        margin-top: 39px;
+
+        &__items {
+            width: 100%;
+            margin: 0 auto;
+            
+            
+            &__item {
+                height: 188px;
+                display: flex;
+                box-shadow: 8px 8px 21px rgba(0, 0, 0, 0.13);
+                position: relative;
+    
+                &__img {
+                    width: 144px;
+                    
+                    img { 
+                        height: 100%;
+                        width: 144px;
+                    }
+                }
+    
+                &__info {
+                    margin-top: 0;
+                    padding-top: 13.5px;
+                    padding-left: 17px;
+                    width: 262px;
+    
+                    &__title {
+                        font-size: $mainFontSize + 2;
+                        line-height: $mainLineHeight + 2;
+                        color: $secondaryColor;
+                        margin-bottom: 26px;
+                    }
+    
+                    &__text {
+                        font-size: $mainFontSize;
+                        line-height: $mainLineHeight;
+                        color: #575757;
+    
+                        span {
+                            color: #EF5B70;
+                        }
+    
+                        &__quantity {
+                            display: inline-block;
+                            padding: 0 9px;
+                            border: 1px solid #EAEAEA;
+                            
+                        }
+                    }
+    
+                    &__text:not(:last-child) {
+                        margin-bottom: 6px;
+                    }
+                }
+    
+                &__exit {
+                    position: absolute;
+                    top: 0px;
+                    right: 12px;
+                    font-size: 30px;
+    
+                    &:hover svg {
+                        fill: $mainColor;
+                    }
+                } 
+
+                &:not(:last-of-type) {
+                    margin-bottom: 32px;
+                }
+            }
+
+            &__btns {
+                margin-top: 0;
+
+                div {
+                    width: 175px;
+                    text-align: center;
+                    padding: 9px 8px 10px 9px;
+                    font-weight: normal;
+                    font-size: $mainFontSize - 2;
+                    line-height: $mainLineHeight - 3;
+                    color: $secondaryColor;
+                    border: 1px solid #A4A4A4;
+                }
+            }
+        }
+
+        &__header {
+            margin-top: 48px;
+        }
+
+        &__info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__address {
+                margin-bottom: 48px;
             }
         }
     }

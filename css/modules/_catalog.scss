@@ -43,13 +43,16 @@ summary {
 
 main {
     .filter_block {
-        @include just-content-space-between;
         @include container;
+        &__wrap {
+            @include just-content-space-between;
+            width: 670px;
+        }
 
         margin-bottom: 64px;
 
         &__main {
-            margin-right: 30px;
+            
 
             &__details {
                 width: 360px;
@@ -125,23 +128,22 @@ main {
         }
 
         &__sort {
-          
+            @include just-content-space-between;
 
-            margin-right: 454px;
             padding-top: 13px;
             color: #6F6E6E;
             width: 296px;
 
             &__trending {
-                width: 132px;
+                min-width: 155px;
             }
 
             &__size {
-                width: 49px;
+                min-width: 60px;
             }
 
             &__price {
-                width: 59px;
+                min-width: 78px;
             }
 
             &__-__details {
@@ -151,11 +153,11 @@ main {
 
 
             &__size {
-                margin-left: 178px;
+                
             }
 
             &__price {
-                margin-left: 272px;
+                
             }
 
             &__trending ul,
@@ -269,6 +271,61 @@ main {
 
             &:last-child {
                 @include vertical-aligement;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) and (min-width:376px) {
+    .navigation {
+        padding-left: 16px;
+        padding-right: 16px;
+        
+
+        &__header {
+            padding: 0;
+        }
+    }
+
+    .filter_block__wrap {
+        min-width: 100%;
+    }
+}
+
+@media (max-width:375px)  {
+    .navigation {
+        .container{
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__header {
+            margin-bottom: 32px;
+        }
+    }
+
+    .filter_block {
+        &__wrap {
+            max-width: 100%;
+        } 
+
+        &__sort {
+            &__trending {
+                min-width: 155px;
+            }
+
+            &__size {
+                min-width: 60px;
+            }
+
+            &__price {
+                min-width: 78px;
+            }
+        }
+
+        &__main__details__summary {
+            span {
+                display: none;
             }
         }
     }

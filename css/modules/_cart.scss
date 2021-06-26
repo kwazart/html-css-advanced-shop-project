@@ -100,16 +100,16 @@
 
             margin-bottom: 57px;
 
+            p {
+                font-weight: 300;
+                font-size: $mainFontSize + 2;
+                line-height: $mainLineHeight + 2;
+                color: $secondaryColor;
+            }
+
             &__form {
                 display: flex;
                 flex-direction: column;
-
-                legend {
-                    font-weight: 300;
-                    font-size: $mainFontSize + 2;
-                    line-height: $mainLineHeight + 2;
-                    color: $secondaryColor;
-                }
 
                 input[type="text"] {
                     @include vertical-aligement;

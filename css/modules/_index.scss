@@ -75,16 +75,14 @@
 }
 
 .intro {
-    height: 754px;
     background-color: #f1e4e6;
     margin-bottom: 65px;
 
     &__wrap {
         @include container;
-
         display: flex;
         align-items: center;
-        height: 100%;
+        min-height: 750px;
         justify-content: flex-end;
 
         background-image: url('../../images/man-main.png');
@@ -112,7 +110,6 @@
     }
 }
 
-
 .for_blocks {
     &__wrap {
         @include just-content-space-between;
@@ -123,14 +120,14 @@
 
     &__card {
         @include just-content-center;
-        width: 360px;
-        height: 260px;
+        width: 32%;
+        min-height: 260px;
         text-align: center;
 
         &:last-child {
             width: 100%;
             margin-top: 30px;
-            height: 180px;
+            max-height: 180px;
             margin-bottom: 96px;
         }
 
@@ -213,7 +210,8 @@
             width: 360px;
             height: 420px;
         }
-    }
+    } 
+
 
     &__description {
         padding: 25px 28px 20px 16px;
@@ -292,5 +290,149 @@
         font-weight: 300;
         text-align: center;
         color: #FBFBFB;
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) and (min-width:376px) {
+    .features {
+        height: 610px;
+
+        &__inner_wrap {
+            flex-direction: column;
+        } 
+        
+        &__one:not(:last-child) {
+            margin-bottom: 48px;
+            margin-right: 0px;
+        }
+    }
+
+    .item_blocks__block {
+        margin-bottom: 16px;
+
+        &:nth-child(n) {
+            margin-left: 16px;
+        }
+        &:nth-child(2n) {
+            margin-right: 16px;
+        }
+   }
+
+   .for_blocks {
+        &__wrap {
+            padding: 0 16px;
+            max-width: 768px - 16px * 2;;
+        }
+
+        &__card {
+            min-height: 168px;
+
+            &:last-child {
+                min-height: 110px;
+            }
+        }
+    } 
+
+    .intro{
+        &__wrap {
+            min-height:368px;
+            background-size: 50%;
+            background-position: 0 0;
+        }
+
+        &__text {
+            max-width: 311px;
+            font-size: $mainFontSize + 10;
+            line-height: $mainLineHeight + 12;
+            margin-right: 35px;
+    
+            &__header {
+                font-size: $mainFontSize + 30;
+                line-height: $mainLineHeight + 37;
+            }
+    
+        }
+    }
+}
+
+/* phone */
+@media (max-width: 375px) {
+    .features {
+        height: 610px;
+        padding-left: 13px;
+        padding-right: 13px;
+
+        &__inner_wrap {
+            flex-direction: column;
+        } 
+        
+        &__one {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 48px;
+                margin-right: 0px;
+            }
+        }
+        
+    }
+
+    .item_blocks {
+        margin-bottom: 40px;
+
+        &__wrap {
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+
+        &__block {
+            margin: 0 auto;
+        }
+    }
+    
+
+    .for_blocks {
+        padding-left: 16px;
+        padding-right: 16px;
+            &__wrap {
+                flex-direction: column;
+            }
+
+            &__card {
+                @include just-content-center;
+                width: 100%;
+                min-height: 260px;
+                text-align: center;
+                margin-bottom: 32px;
+        
+                &:last-child {
+                    width: 100%;
+                    min-height: 111px;
+                    margin-bottom: 96px;
+                    margin-top: 0;
+
+                }
+            }
+        } 
+
+    .intro{
+        &__wrap {
+            min-height:368px;
+            background-image: none;
+            justify-content: center;
+        }
+
+        &__text {
+            max-width: 263px;
+            font-size: $mainFontSize + 6;
+            line-height: $mainLineHeight + 7;
+
+    
+            &__header {
+                font-size: $mainFontSize + 21;
+                line-height: $mainLineHeight + 28;
+            }
+    
+        }
     }
 }
